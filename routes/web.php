@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::middleware([
     'auth:sanctum',
@@ -26,6 +26,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('company/register', function () {
+    return view('company.register');
+})->middleware('guest')
+    ->name('company.register');
 
 Route::resource('groupuses', App\Http\Controllers\GroupuseController::class);
 // リソースを使用しない場合

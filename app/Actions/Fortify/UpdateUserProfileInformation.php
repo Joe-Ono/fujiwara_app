@@ -24,8 +24,20 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'profile' => ['nullable', 'string', 'max:2000'],
         ])->validateWithBag('updateProfileInformation');
 
+        if (isset($input['company'])) {
+            Validator::make($input, [
+                'company.name' => ['required', 'string', 'max:255'],
+                'company.profile' => ['nullable', 'string', 'max:255'],
+                'company_photo' => ['nullable', 'mimes:jpg,jpeg,png,webp', 'max:1024'],
+            ])->validateWithBag('updateProfileInformation');
+        }
+
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
+        }
+
+        if (isset($input['company_photo'])) {
+            $user->company->updateProfilePhoto($input['company_photo']);
         }
 
         if ($input['email'] !== $user->email &&
@@ -36,6 +48,13 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'name' => $input['name'],
                 'email' => $input['email'],
                 'profile' => $input['profile'],
+            ])->save();
+        }
+
+        if (isset($input['company'])) {
+            $user->company->forceFill([
+                'name' => $input['company']['name'],
+                'profile' => $input['company']['profile'],
             ])->save();
         }
     }
