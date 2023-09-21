@@ -81,6 +81,13 @@
                 @endif
             @endif
         </div>
+
+        <!-- Profile -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="profile" value="{{ __('自己紹介') }}" />
+            <textarea name="profile" id="profile" cols="30" rows="5" class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full" wire:model.defer="state.profile" ></textarea>
+            <x-input-error for="profile" class="mt-2" />
+        </div>
     </x-slot>
 
     <x-slot name="actions">
