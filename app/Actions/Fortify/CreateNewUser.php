@@ -29,11 +29,6 @@ class CreateNewUser implements CreatesNewUsers
             'company_name' => ['string', 'max:255', 'unique:companies,name'],
         ])->validate();
 
-        // return User::create([
-        //     'name' => $input['name'],
-        //     'email' => $input['email'],
-        //     'password' => Hash::make($input['password']),
-        // ]);
         DB::beginTransaction();
         try {
             // ユーザーの登録
@@ -55,6 +50,6 @@ class CreateNewUser implements CreatesNewUsers
         } catch (\Throwable $th) {
             DB::rollBack();
         }
-        return $user; 
+        return $user;
     }
 }

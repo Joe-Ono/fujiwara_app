@@ -1,10 +1,8 @@
 <x-guest-layout>
     <x-authentication-card>
-        {{-- <div id="symbol">
-            <img src="{{ Storage::url('images/hiraizumisymbol.png' ) }}">
+        {{-- <div id="cover-img">
+            <img src="{{ Storage::url('images/hiraizumisymbol.png') }}" alt="" class="mb-4">
         </div> --}}
-
-        <h2 class="text-center font-medium text-gray-700 mb-4">ログイン</h2>
 
         <x-validation-errors class="mb-4" />
 
