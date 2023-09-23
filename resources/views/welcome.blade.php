@@ -25,7 +25,7 @@
                         <div class="absolute bg-gradient-to-b from-indigo-900 to-black opacity-75 inset-0 z-0"></div>
                         <div class="w-4/5 z-10">
                             <h2 class="text-xl xl:text-3xl italic mb-6">Job Match</h2>
-                            <div class="text-5xl sm:text-6xl xl:text-8xl font-bold leading-tight mb-6">楽しくなければ<br>仕事じゃない
+                            <div class="text-5xl sm:text-6xl xl:text-8xl font-bold leading-tight mb-6">平泉町体育施設<br>
                             </div>
                             <div class="sm:text-sm xl:text-md text-gray-200 font-normal">Job Matchは会社に不満を抱えている人と、楽しく働くことができる企業をマッチングするサービスです。</div>
                         </div>
@@ -33,24 +33,7 @@
                             <div class="max-w-md w-full space-y-8">
                                 <div class="text-center text-white">
                                     <h3 class="mt-6 text-2xl font-bold mb-6">
-                                        採用担当者の方はこちら
-                                    </h3>
-                                    <div>
-                                        <a href="{{ route('login') }}" class="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600 hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500">Sign in</a>
-                                    </div>
-                                    <p class="flex flex-col items-center justify-center mt-10 text-center text-md">
-                                        <span>Don't have an account?</span>
-                                        <a href="{{ route('company.register') }}"
-                                            class="hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign
-                                            up</a>
-                                    </p>
-                                </div>
-                                <div class="flex items-center justify-center space-x-2">
-                                    <span class="h-px w-full bg-gray-200"></span>
-                                </div>
-                                <div class="text-center text-white">
-                                    <h3 class="mt-6 text-2xl font-bold mb-6">
-                                        転職希望の方はこちら
+                                        ご利用希望の方はこちら
                                     </h3>
                                     <div>
                                         <a href="{{ route('login') }}" class="w-full flex justify-center bg-gradient-to-r from-pink-500 to-purple-600 hover:bg-gradient-to-l hover:from-purple-500 hover:to-pink-600 text-gray-100 p-4 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500">Sign in</a>
@@ -62,6 +45,24 @@
                                             up</a>
                                     </p>
                                 </div>
+                                <div class="flex items-center justify-center space-x-2">
+                                    <span class="h-px w-full bg-gray-200"></span>
+                                </div>
+                                <div class="text-center text-white">
+                                    <h3 class="mt-6 text-2xl font-bold mb-6">
+                                        役場担当者の方はこちら
+                                    </h3>
+                                    <div>
+                                        <a href="{{ route('login') }}" class="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600 hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500">Sign in</a>
+                                    </div>
+                                    <p class="flex flex-col items-center justify-center mt-10 text-center text-md">
+                                        <span>Don't have an account?</span>
+                                        <a href="{{ route('company.register') }}"
+                                            class="hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign
+                                            up</a>
+                                    </p>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
