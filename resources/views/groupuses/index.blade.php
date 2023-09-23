@@ -9,9 +9,9 @@
 <body>
     <h1>平泉町体育施設</h1>
     <!-- 利用登録画面へジャンプする -->
-    <button onclick="location.href='/groupuses/create'">利用登録</button>
+    <button onclick="location.href='/groupuses/create'">利用団体登録</button>
     <!-- ログイン画面へジャンプする -->
-    <button onclick="location.href='/groupuses/'">ログイン</button>
+    <button onclick="location.href='/groupuses/'">体育施設予約</button>
     <div id="cover-img">
         {{-- <img src="img/reservationsystem.png" alt="cover-photo"> --}}
         <img src="{{ Storage::url('images/reservationsystem.png' ) }}" alt="" class="mb-4">

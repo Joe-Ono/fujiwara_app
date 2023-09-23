@@ -11,7 +11,7 @@
 
 <body>
     <a href="/groupuses">戻る</a>
-    <h1>新規登録</h1>
+    <h1>利用団体登録</h1>
 
     @if ($errors->any())
         <div class="error">
