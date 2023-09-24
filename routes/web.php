@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\FullCalendarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('welcome');
 
 Route::middleware([
     'auth:sanctum',
@@ -27,6 +29,17 @@ Route::middleware([
     })->name('dashboard');
 });
 
+    Route::get('/', [EventController::class, 'index'])
+        ->name('root');
+
+    // CRUD用
+    Route::resource('events', EventController::class);
+
+    // カレンダー用
+    Route::get('/calendar', function () {
+        return view('full-calendar');
+    })->name('calendar');
+    Route::get('/calendar/action', [FullCalendarController::class, 'index']);
 Route::get('company/register', function () {
     return view('company.register');
 })->middleware('guest')
