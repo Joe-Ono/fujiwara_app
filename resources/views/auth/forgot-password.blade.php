@@ -1,8 +1,8 @@
 <x-guest-layout>
     <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+        {{-- <div id="cover-img">
+            <img src="{{ Storage::url('images/hiraizumisymbol.png') }}" alt="" class="mb-4">
+        </div> --}}
 
         <div class="mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}

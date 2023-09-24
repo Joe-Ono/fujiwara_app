@@ -1,8 +1,10 @@
 <x-guest-layout>
     <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+        {{-- <div id="cover-img">
+            <img src="{{ Storage::url('images/hiraizumisymbol.png') }}" alt="" class="mb-4">
+        </div> --}}
+
+        <h2 class="text-center font-medium text-gray-700 mb-4">ログイン</h2>
 
         <x-validation-errors class="mb-4" />
 

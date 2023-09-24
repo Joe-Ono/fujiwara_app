@@ -33,7 +33,7 @@ class GroupuseRequest extends FormRequest
             'date_of_use' => 'required|string|max:50',
             'time_of_use' => 'required|string|max:50',
             'facilities_to_use' => 'required|string|max:50',
-            'equipment_to_use'=> 'required|string|max:50',
+            'equipment_to_use' => 'required|string|max:50',
             'activity_contents' => 'required|string|max:2000',
             'member1_name' => 'required|string|max:50',
             'member1_adress' => 'required|string|max:50',
@@ -43,10 +43,10 @@ class GroupuseRequest extends FormRequest
             'member3_adress' => 'required|string|max:50',
             'member4_name' => 'required|string|max:50',
             'member4_adress' => 'required|string|max:50',
-            'member5_name' => 'required|string|max:50',
-            'member5_adress' => 'required|string|max:50',
-            'member6_name' => 'required|string|max:50',
-            'member6_adress' => 'required|string|max:50',
+            'member5_name' => 'nullable|string|max:50',
+            'member5_adress' => 'nullable|string|max:50',
+            'member6_name' => 'nullable|string|max:50',
+            'member6_adress' => 'nullable|string|max:50',
             'member7_name' => 'nullable|string|max:50',
             'member7_adress' => 'nullable|string|max:50',
             'member8_name' => 'nullable|string|max:50',
@@ -74,7 +74,7 @@ class GroupuseRequest extends FormRequest
             'member19_name' => 'nullable|string|max:50',
             'member19_adress' => 'nullable|string|max:50',
             'member20_name' => 'nullable|string|max:50',
-            'member20_adress' => 'nullable|string|max:50',            
+            'member20_adress' => 'nullable|string|max:50',
         ];
     }
 }
