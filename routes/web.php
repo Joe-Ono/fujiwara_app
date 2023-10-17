@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('welcome');
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::middleware([
     'auth:sanctum',
@@ -29,8 +29,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
-    Route::get('/', [EventController::class, 'index'])
-        ->name('root');
+    // Route::get('/', [EventController::class, 'index'])
+    //     ->name('root');
 
     // CRUD用
     Route::resource('events', EventController::class);

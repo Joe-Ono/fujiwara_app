@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')  // 紐付け先がBigIncrements型の場合のみ使用できる
+            $table->foreignId('user_id') // 紐付け先がBigIncrements型の場合のみ使用できる
                 ->constrained()  // テーブル名が異なる場合は引数にしてい
                 ->cascadeOnDelete()   // 紐付け先が削除された場合の動作
-                ->cascadeOnUpdate();  // 紐付け先が更新された場合の動作
+                ->cascadeOnUpdate()->nullable();  // 紐付け先が更新された場合の動作
             // 上記以外の方法
             // $table->foreign('user_id')
             //     ->references('id')
